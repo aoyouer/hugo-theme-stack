@@ -4,6 +4,7 @@ module:
         min: "0.87.0"
 
 params:
+    showLanguageSwitch: true # 是否显示语言选择
     mainSections:
         - post
     featuredImageField: image
