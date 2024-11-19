@@ -1,5 +1,6 @@
 {{ $sass := resources.Get "scss/style.scss" }}
-{{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint "sha256" }}
+<!-- {{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint "sha256" }} -->
+{{ $style := $sass | toCSS | minify | resources.Fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 <style>
 @font-face {
